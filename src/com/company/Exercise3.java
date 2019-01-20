@@ -46,7 +46,7 @@ public class Exercise3 {
                 if (range2 == range1) {
                     stringBuilder.append("[").append(range1).append("]");
                 } else {
-                    stringBuilder.append("[").append(range1).append(" ").append(range2).append("]");
+                    stringBuilder.append("[").append(range1).append("..").append(range2).append("]");
                 }
                 range1 = arr[i];
             }

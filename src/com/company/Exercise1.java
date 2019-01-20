@@ -42,7 +42,6 @@ public class Exercise1 {
         }
         System.out.println("Array is " + Arrays.toString(arr));
 
-        int[] new_arr = new int[arr.length - numberOfElements];
         int[] new_arr1 = new int[numberOfElements];
         int count = 0;
 
