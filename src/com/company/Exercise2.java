@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /*Restore array
 
@@ -31,8 +30,31 @@ Output
 */
 
 public class Exercise2 {
+    static int[] resortArray(int length, int[] arr){
+        System.out.println("Array length is " + length);
+        System.out.println("Array is " + Arrays.toString(arr));
+        for (int i = 0; i < arr.length ; i++) {
+            if (arr[i] < 0){
+                arr[i] = (arr[i-1] + arr[i+1])/2;
+            }
+            else if (arr[0] < 0){
+                arr[0] = arr[1] - 1;
+            }
+            else  if (arr[arr.length-1] < 0) {
+                arr[arr.length-1] = arr[arr.length-2] + 1;
+            }
+            else  if ( arr[i] < 0 && arr[i + 1] < 0 ){
+                arr[i] = arr[i + 2] - 2;
+                arr[i + 1] = arr[i + 2] - 1;
+            }
+        }
+        System.out.println("Resort Array is: " + Arrays.toString(arr));
+        return arr;
+    }
+
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        resortArray(8, new int[]{1, 2, -1, 4, 7, 6, -2, 4});
+        /*Scanner scn = new Scanner(System.in);
         System.out.println("Please Enter the Array Length");
         int length = scn.nextInt();
         int[] arr = new int[length];
@@ -57,6 +79,6 @@ public class Exercise2 {
                 arr[i + 1] = arr[i + 2] - 1;
             }
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));*/
     }
 }
