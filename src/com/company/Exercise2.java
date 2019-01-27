@@ -42,8 +42,8 @@ public class Exercise2 {
             else if (resArray[0] < 0){
                 resArray[0] = resArray[1] - 1;
             }
-            else  if (resArray[resArray.length-1] < 0) {
-                resArray[resArray.length-1] = resArray[resArray.length-2] + 1;
+            else  if (resArray[resArray.length - 1] < 0) {
+                resArray[resArray.length - 1] = resArray[resArray.length - 2] + 1;
             }
         }
         return resArray;

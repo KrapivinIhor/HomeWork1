@@ -36,9 +36,7 @@ public class Exercise1 {
         }
         int[] toArray = new int[arr.length];
         System.arraycopy(arr,numberOfElements,toArray,0,arr.length-numberOfElements);
-        //System.out.println(Arrays.toString(new_arr2));
         System.arraycopy(fromArray,0,toArray,toArray.length - numberOfElements,numberOfElements);
-        //System.out.println(Arrays.toString(new_arr2));
         return toArray;
     }
 
