@@ -1,13 +1,6 @@
-<<<<<<< HEAD
+
 # IntellijIdea files
 *.iml
 .idea
 .class
 out/
-=======
-# IntellijIdea files
-*.iml
-.idea
-.class
-out/
->>>>>>> origin/master
