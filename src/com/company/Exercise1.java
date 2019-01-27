@@ -27,7 +27,7 @@ Output
 */
 
 public class Exercise1 {
-    static int[] rotationOfTheArray(int length, int numberOfElements, int[] arr){
+    public static int[] rotationOfTheArray(int length, int numberOfElements, int[] arr){
         int[] fromArray = new int[numberOfElements];
         int count = 0;
         for (int i = 0; i < numberOfElements ; i++) {
