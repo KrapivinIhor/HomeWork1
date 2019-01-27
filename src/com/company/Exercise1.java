@@ -30,17 +30,14 @@ public class Exercise1 {
     public static int[] rotationOfTheArray(int length, int numberOfElements, int[] arr){
         int[] fromArray = new int[numberOfElements];
         int count = 0;
-        for (int i = 0; i < numberOfElements ; i++) {
-            fromArray[count] = arr[i];
-            count++;
-        }
         int[] toArray = new int[arr.length];
         System.arraycopy(arr,numberOfElements,toArray,0,arr.length-numberOfElements);
-        System.arraycopy(fromArray,0,toArray,toArray.length - numberOfElements,numberOfElements);
+        System.arraycopy(arr,0,toArray,toArray.length - numberOfElements,numberOfElements);
         return toArray;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(rotationOfTheArray(15,3, new int[]{5,6,1,2,6,5,6,1,2,6,5,6,1,2,6})));
+        System.out.println(Arrays.toString(rotationOfTheArray(15,3,
+                new int[]{5, 6, 1, 2, 6, 5, 6, 1, 2, 6, 5, 6, 1, 2, 6})));
     }
 }

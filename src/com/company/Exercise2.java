@@ -37,7 +37,7 @@ public class Exercise2 {
         }
         for (int i = 0; i < resArray.length ; i++) {
             if (resArray[i] < 0){
-                resArray[i] = (resArray[i-1] + resArray[i+1])/2;
+                resArray[i] = (resArray[i - 1] + resArray[i + 1])/2;
             }
             else if (resArray[0] < 0){
                 resArray[0] = resArray[1] - 1;
