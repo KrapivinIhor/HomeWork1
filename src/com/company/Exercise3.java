@@ -48,6 +48,7 @@ public class Exercise3 {
     }
 
     public static void main(String[] args) {
-        rangesOfArray(11, new int[]{1,2,3,5,8,9,10,13,14,15,16});
+        rangesOfArray(11,
+                new int[]{1, 2, 3, 5, 8, 9, 10, 13, 14, 15, 16});
           }
 }
