@@ -33,7 +33,7 @@ public class Exercise3 {
                 minElementOfTheRange = arr[i];
             }
         }
-        appendRanges(stringBuilder, minElementOfTheRange, arr[arr.length-1]);
+        appendRanges(stringBuilder, minElementOfTheRange, arr[arr.length - 1]);
         System.out.println("Ranges are: " + stringBuilder.toString());
         }
 
