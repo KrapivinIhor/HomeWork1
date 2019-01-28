@@ -29,23 +29,21 @@ public class Exercise3 {
         for (int i = 1; i < length; i++) {
             if (arr[i] - arr[i - 1] > 1) {
                 maxElementOfTheRange = arr[i - 1];
-                if (maxElementOfTheRange == minElementOfTheRange) {
-                    stringBuilder.append("[").append(minElementOfTheRange).append("]");
-                } else {
-                    stringBuilder.append("[").append(minElementOfTheRange).append("..").append(maxElementOfTheRange).append("]");
-                }
+                appendRanges(stringBuilder, minElementOfTheRange, maxElementOfTheRange);
                 minElementOfTheRange = arr[i];
             }
         }
-        if (arr[length - 1] - arr[length - 2] == 1) {
-            stringBuilder.append("[").append(minElementOfTheRange).append("..").append(arr[length - 1]).append("]");
-        } else {
-            stringBuilder.append("[").append(arr[length - 1]).append("]");
+        appendRanges(stringBuilder, minElementOfTheRange, arr[arr.length-1]);
+        System.out.println("Ranges are: " + stringBuilder.toString());
         }
 
-        System.out.println("Ranges are:" + stringBuilder.toString());
-
-    }
+        private static void appendRanges(StringBuilder sb, int minRange, int maxRange) {
+            sb.append("[").append(minRange);
+            if (maxRange != minRange) {
+                sb.append("..").append(maxRange);
+            }
+            sb.append("]");
+        }
 
     public static void main(String[] args) {
         rangesOfArray(11,

@@ -28,16 +28,14 @@ Output
 
 public class Exercise1 {
     public static int[] rotationOfTheArray(int length, int numberOfElements, int[] arr){
-        int[] fromArray = new int[numberOfElements];
-        int count = 0;
-        int[] toArray = new int[arr.length];
-        System.arraycopy(arr,numberOfElements,toArray,0,arr.length-numberOfElements);
-        System.arraycopy(arr,0,toArray,toArray.length - numberOfElements,numberOfElements);
-        return toArray;
+        int[] helperArray = new int[arr.length];
+        System.arraycopy(arr, numberOfElements, helperArray, 0, arr.length - numberOfElements);
+        System.arraycopy(arr, 0,helperArray, helperArray.length - numberOfElements, numberOfElements);
+        return helperArray;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(rotationOfTheArray(15,3,
+        System.out.println(Arrays.toString(rotationOfTheArray(15, 3,
                 new int[]{5, 6, 1, 2, 6, 5, 6, 1, 2, 6, 5, 6, 1, 2, 6})));
     }
 }
