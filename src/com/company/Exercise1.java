@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 /*Array Rotation
 
@@ -30,7 +29,7 @@ public class Exercise1 {
     public static int[] rotationOfTheArray(int length, int numberOfElements, int[] arr){
         int[] helperArray = new int[arr.length];
         System.arraycopy(arr, numberOfElements, helperArray, 0, arr.length - numberOfElements);
-        System.arraycopy(arr, 0,helperArray, helperArray.length - numberOfElements, numberOfElements);
+        System.arraycopy(arr, 0, helperArray, helperArray.length - numberOfElements, numberOfElements);
         return helperArray;
     }
 
